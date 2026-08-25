@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{NAME}} - Professional Developer Portfolio. {{HEADLINE}}">
+  <meta name="author" content="{{NAME}}">
+  <title>{{NAME}} | Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-developer.css">
+</head>
+<body>
+  <!-- Clean Minimal Background -->
+  <div class="simple-bg-grid" aria-hidden="true"></div>
+
+  <!-- Minimal Navigation -->
+  <header class="simple-header">
+    <div class="simple-container nav-wrapper">
+      <a href="#hero" class="simple-brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">{{NAME}}</span>
+      </a>
+      <nav class="simple-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          {{NAV_LINKS}}
+          <li><a href="#contact" class="nav-btn-contact">Contact</a></li>
+          <li>
+            <button type="button" class="nav-btn-download" id="navDownloadBtn" title="Download this portfolio HTML">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Simple Hero Section -->
+    <section id="hero" class="simple-hero">
+      <div class="simple-container">
+        <div class="hero-wrapper">
+          <div class="status-pill">
+            <span class="pulse-dot"></span>
+            <span>Available for Opportunities</span>
+          </div>
+          <div class="ai-profile-slot">{{PROFILE_IMAGE}}</div>
+          <h1 class="hero-title">{{NAME}}</h1>
+          <p class="hero-subtitle">{{HEADLINE}}</p>
+          <p class="hero-bio">{{SUMMARY}}</p>
+          
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn-simple-primary">
+              View Projects &darr;
+            </a>
+            <button type="button" class="btn-simple-download" id="heroDownloadBtn" title="Download this portfolio HTML">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download Portfolio</span>
+            </button>
+            <a href="#contact" class="btn-simple-secondary">
+              Contact Me
+            </a>
+          </div>
+
+          <div class="hero-social-links">
+            {{HERO_SOCIAL_LINKS}}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{ABOUT_SECTION}}
+
+    {{SKILLS_SECTION}}
+
+    {{PROJECTS_SECTION}}
+
+    {{EXPERIENCE_SECTION}}
+
+    {{EDUCATION_SECTION}}
+
+    {{ACHIEVEMENTS_SECTION}}
+
+    {{CONTACT_SECTION}}
+  </main>
+
+  <!-- Clean Footer -->
+  <footer class="simple-footer">
+    <div class="simple-container footer-wrapper">
+      <p>&copy; {{YEAR}} {{NAME}}. All rights reserved.</p>
+      <p class="footer-note">Developer Edition • Built for engineers</p>
+    </div>
+  </footer>
+
+  <!-- Self-Contained Portfolio Download Engine -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      function triggerPortfolioDownload() {
+        let candidateName = "{{NAME}}".trim();
+        if (!candidateName || candidateName === "{{" + "NAME}}") {
+          const match = document.title.match(/^(.*?)\s*\|/);
+          candidateName = match ? match[1].trim() : "my";
+        }
+        let cleanName = candidateName.replace(/[^a-zA-Z0-9\s_-]/g, '').trim().replace(/[\s_]+/g, '-');
+        if (!cleanName) cleanName = "my";
+        const downloadFilename = cleanName + "-portfolio.html";
+
+        const htmlDoc = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+        const blob = new Blob([htmlDoc], { type: "text/html;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = downloadFilename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      }
+
+      const navBtn = document.getElementById("navDownloadBtn");
+      const heroBtn = document.getElementById("heroDownloadBtn");
+      if (navBtn) navBtn.addEventListener("click", triggerPortfolioDownload);
+      if (heroBtn) heroBtn.addEventListener("click", triggerPortfolioDownload);
+    });
+  </script>
+</body>
+</html>

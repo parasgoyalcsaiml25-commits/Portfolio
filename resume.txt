@@ -1,0 +1,60 @@
+ALEX RIVERA
+Email: alex.rivera.dev@example.com | Phone: +1 (555) 234-5678
+LinkedIn: https://linkedin.com/in/alexrivera-dev
+GitHub: https://github.com/alexrivera-dev
+Location: San Francisco, CA
+
+PROFESSIONAL SUMMARY
+Motivated Computer Science undergraduate with hands-on experience in full-stack software development, RESTful API design, and cloud-native solutions. Proven track record of delivering collaborative software tools and responsive web applications with a strong focus on clean architecture and performance.
+
+TECHNICAL SKILLS
+- Programming Languages: Python, JavaScript (ES6+), TypeScript, SQL, C++, HTML5, CSS3
+- Frameworks & Libraries: FastAPI, Flask, Node.js, Express, Jinja2
+- Databases & Tools: PostgreSQL, SQLite, Redis, Git, Docker, Postman, Linux (Ubuntu)
+- Concepts: RESTful APIs, MVC Architecture, Object-Oriented Programming, Responsive Web Design
+
+EDUCATION
+Bachelor of Science in Computer Science
+State University of Technology — San Francisco, CA
+Dates: September 2022 – Expected May 2026
+GPA: 3.85 / 4.0
+Relevant Coursework: Data Structures & Algorithms, Database Management Systems, Web Architecture, Operating Systems, Software Engineering Principles.
+
+EXPERIENCE
+Software Engineering Intern | NovaTech Solutions (Remote)
+June 2024 – August 2024
+- Engineered 12+ RESTful API endpoints using Python and FastAPI, reducing average response latency by 28%.
+- Implemented database migrations and query optimizations in PostgreSQL for customer-facing analytics dashboards.
+- Collaborated in an Agile Scrum team, participating in daily standups, code reviews, and automated CI/CD pipeline deployments.
+
+Junior Web Developer | University Computing Services — Tech State
+September 2023 – May 2024
+- Maintained and updated university departmental web portals visited by over 15,000 monthly active students.
+- Refactored legacy frontend code into modern, responsive, semantic HTML5/CSS3 layouts, improving mobile accessibility scores from 72 to 98.
+- Resolved over 40 reported UI/UX issues and bug tickets within SLA deadlines.
+
+PROJECTS
+TaskFlow — Real-Time Collaborative Workspace
+Technologies: Python, FastAPI, WebSockets, PostgreSQL, Docker
+Link: https://github.com/alexrivera-dev/taskflow
+- Built a multi-user kanban workspace supporting real-time board updates via WebSockets.
+- Designed relational schemas and secure JWT authentication workflows.
+- Containerized the full application stack using Docker Compose for seamless reproducible deployment.
+
+EcoTrack — Campus Energy & Carbon Footprint Monitor
+Technologies: JavaScript, Chart.js, HTML5, CSS3, SQLite
+Link: https://github.com/alexrivera-dev/ecotrack
+- Developed an interactive data visualization dashboard displaying hourly campus energy consumption.
+- Integrated automated CSV data ingestion pipelines to process over 50,000 sensor logs.
+- Awarded 1st Place at the Annual University Hackathon (2024).
+
+DevSnippet — Developer Code Vault & Search Engine
+Technologies: Python, Flask, SQLite, REST API
+Link: https://github.com/alexrivera-dev/devsnippet
+- Created a lightweight developer snippet manager featuring syntax highlighting and full-text keyword search.
+- Implemented rate limiting and token-based authentication for external API access.
+
+HONORS & ACHIEVEMENTS
+- 1st Place Winner — Tech State Annual University Hackathon (Spring 2024)
+- Dean's Honor List for Academic Excellence — State University of Technology (4 consecutive semesters: 2022 - 2024)
+- AWS Certified Cloud Practitioner — Amazon Web Services (Issued March 2024)

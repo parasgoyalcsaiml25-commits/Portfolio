@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{NAME}} - Creative Developer Portfolio. {{HEADLINE}}">
+  <meta name="author" content="{{NAME}}">
+  <title>{{NAME}} | Creative Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-designer.css">
+</head>
+<body class="designer-theme">
+
+  <!-- ====================================================================== -->
+  <!-- 1. LOADING SCREEN / PRELOADER                                          -->
+  <!-- ====================================================================== -->
+  <div class="designer-preloader" id="designerPreloader" aria-hidden="true">
+    <div class="preloader-glass">
+      <div class="preloader-brand-line">
+        <span class="preloader-dot"></span>
+        <span class="preloader-tag">// INITIALIZING CREATIVE SUITE</span>
+      </div>
+      <div class="preloader-counter" id="preloaderCounter">01</div>
+      <div class="preloader-bar">
+        <div class="preloader-bar-fill" id="preloaderFill"></div>
+      </div>
+      <div class="preloader-name">{{NAME}}</div>
+    </div>
+  </div>
+
+  <!-- ====================================================================== -->
+  <!-- 2. SCROLL PROGRESS BAR                                                 -->
+  <!-- ====================================================================== -->
+  <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+
+  <!-- ====================================================================== -->
+  <!-- 3. DUAL CUSTOM CURSOR (Desktop Only)                                   -->
+  <!-- ====================================================================== -->
+  <div class="custom-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" id="cursorRing" aria-hidden="true">
+    <span class="cursor-label" id="cursorLabel"></span>
+  </div>
+
+  <!-- ====================================================================== -->
+  <!-- 4. SOPHISTICATED ANIMATED BACKGROUND                                   -->
+  <!-- ====================================================================== -->
+  <div class="designer-ambient-scene" aria-hidden="true">
+    <div class="ambient-orb orb-purple"></div>
+    <div class="ambient-orb orb-cyan"></div>
+    <div class="ambient-orb orb-pink"></div>
+    <div class="ambient-mesh-lines"></div>
+    <div class="ambient-grid-pattern"></div>
+    <div class="ambient-noise-overlay"></div>
+  </div>
+
+  <!-- ====================================================================== -->
+  <!-- 5. COMPACT GLASSMORPHISM NAVIGATION                                    -->
+  <!-- ====================================================================== -->
+  <header class="designer-header" id="designerHeader">
+    <div class="designer-container header-inner">
+      <a href="#hero" class="designer-logo magnetic-btn">
+        <span class="logo-accent">//</span>
+        <span class="logo-text">{{NAME}}</span>
+      </a>
+      <nav class="designer-nav" aria-label="Main Navigation">
+        <ul class="nav-links-designer">
+          {{NAV_LINKS}}
+          <li>
+            <a href="#contact" class="designer-cta-link magnetic-btn">
+              <span>Let's Talk &rarr;</span>
+            </a>
+          </li>
+          <li>
+            <button type="button" class="designer-nav-download-btn magnetic-btn" id="designerNavDownloadBtn" title="Download this portfolio HTML">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================================================================== -->
+    <!-- 6. EDITORIAL HERO SECTION                                            -->
+    <!-- ==================================================================== -->
+    <section id="hero" class="designer-hero">
+      <div class="designer-container hero-editorial-container">
+        
+        <!-- Top left branding -->
+        <div class="hero-corner-brand hero-entrance-1">
+          <span class="corner-name">[{{NAME}}]</span> &mdash; <span class="corner-role">{{HEADLINE}}</span>
+          <br><span style="opacity: 0.6; font-size: 0.9em; margin-top: 4px; display: inline-block;">Available for innovative opportunities</span>
+        </div>
+
+        <div class="hero-editorial">
+          <!-- Main Staggered Headline Reveal -->
+          <!-- We use JS at the bottom to split {{HEADLINE}} into staggered lines -->
+          <div class="hero-huge-title" id="heroHugeTitle" data-name="{{NAME}}" data-headline="{{HEADLINE}}">
+            <!-- Fallback for no-js -->
+            <noscript>
+              <div class="line-mask"><h1 class="hero-entrance-line">{{NAME}}</h1></div>
+              <div class="line-mask"><h1 class="hero-entrance-line italic-serif">{{HEADLINE}}</h1></div>
+            </noscript>
+          </div>
+
+          <!-- Headline & Summary Statement Grid -->
+          <div class="hero-statement-grid">
+            <div class="hero-headline-wrap hero-entrance-3">
+              <p class="hero-headline-text">INTRODUCTION</p>
+            </div>
+            <div class="hero-summary-wrap hero-entrance-4">
+              <p class="hero-summary-text">{{SUMMARY}}</p>
+              
+              <!-- CTA Actions -->
+              <div class="hero-magnetic-actions hero-entrance-5">
+                <a href="#projects" class="btn-designer-primary magnetic-btn">
+                  <span>Explore Work &darr;</span>
+                </a>
+                <button type="button" class="btn-designer-download magnetic-btn" id="designerHeroDownloadBtn" title="Download this portfolio HTML">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  <span>Download Portfolio</span>
+                </button>
+                <a href="#contact" class="btn-designer-glass magnetic-btn">
+                  <span>Get In Touch</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="hero-social-strip hero-entrance-6">
+            {{HERO_SOCIAL_LINKS}}
+          </div>
+        </div>
+
+        <!-- Vertical Scroll Cue -->
+        <div class="hero-scroll-cue hero-entrance-5">
+          <span class="scroll-text">SCROLL</span>
+          <div class="scroll-line"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dynamic Portfolio Sections -->
+    {{ABOUT_SECTION}}
+
+    {{SKILLS_SECTION}}
+
+    {{PROJECTS_SECTION}}
+
+    {{EXPERIENCE_SECTION}}
+
+    {{EDUCATION_SECTION}}
+
+    {{ACHIEVEMENTS_SECTION}}
+
+    {{CONTACT_SECTION}}
+  </main>
+
+  <!-- ====================================================================== -->
+  <!-- 7. DESIGNER FOOTER                                                     -->
+  <!-- ====================================================================== -->
+  <footer class="designer-footer">
+    <div class="designer-container footer-inner">
+      <div class="footer-brand-col">
+        <span class="footer-logo">{{NAME}}</span>
+        <p class="footer-tagline">Designer Edition Portfolio &bull; Crafted with AI-Assisted Architecture</p>
+      </div>
+      <div class="footer-meta-col">
+        <p>&copy; {{YEAR}} {{NAME}}. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================================================== -->
+  <!-- 8. HIGH-PERFORMANCE DESIGNER INTERACTION & MOTION SCRIPT ENGINE        -->
+  <!-- ====================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 0. Dynamic Headline Splitting
+      const titleContainer = document.getElementById('heroHugeTitle');
+      if (titleContainer) {
+        const name = titleContainer.getAttribute('data-name') || '';
+        const headline = titleContainer.getAttribute('data-headline') || '';
+        
+        let html = `<div class="line-mask"><h1 class="hero-entrance-line">${name}</h1></div>`;
+        
+        // Split headline into words and group them (e.g. max 2 words per line)
+        const words = headline.split(' ').filter(w => w.trim() !== '');
+        for (let i = 0; i < words.length; i += 2) {
+          const chunk = words.slice(i, i + 2).join(' ');
+          // Make the last line italic-serif for stylistic flair
+          const isLast = (i + 2) >= words.length;
+          html += `<div class="line-mask"><h1 class="hero-entrance-line ${isLast ? 'italic-serif' : ''}">${chunk}</h1></div>`;
+        }
+        titleContainer.innerHTML = html;
+        
+        // Dynamically add transition delays to the newly created lines
+        const lines = titleContainer.querySelectorAll('.line-mask .hero-entrance-line');
+        lines.forEach((line, index) => {
+          line.style.transitionDelay = `${0.1 + (index * 0.15)}s`;
+        });
+      }
+
+      // 1. Reduced motion check
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const isTouchDevice = window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 768;
+
+      // 2. Preloader Animation Sequence (< 1.2s)
+      const preloader = document.getElementById('designerPreloader');
+      const counterEl = document.getElementById('preloaderCounter');
+      const fillEl = document.getElementById('preloaderFill');
+
+      if (preloader) {
+        if (prefersReducedMotion) {
+          preloader.style.display = 'none';
+          document.body.classList.add('loaded');
+        } else {
+          let progress = 1;
+          const stages = ['01', '02', '03', '04'];
+          let stageIdx = 0;
+
+          const loadInterval = setInterval(() => {
+            progress += 3;
+            if (counterEl && stageIdx < stages.length) {
+              counterEl.textContent = stages[stageIdx];
+              if (progress > (stageIdx + 1) * 25) stageIdx++;
+            }
+            if (fillEl) fillEl.style.width = Math.min(progress, 100) + '%';
+
+            if (progress >= 100) {
+              clearInterval(loadInterval);
+              setTimeout(() => {
+                preloader.classList.add('fade-out');
+                document.body.classList.add('loaded');
+                setTimeout(() => {
+                  preloader.style.display = 'none';
+                }, 600);
+              }, 150);
+            }
+          }, 24);
+        }
+      }
+
+      // 3. Scroll Progress Indicator & Header Scroll Class
+      const progressBar = document.getElementById('scrollProgressBar');
+      const header = document.getElementById('designerHeader');
+      const timelineFill = document.getElementById('timelineFill');
+      const timelineTrack = document.getElementById('timelineTrack');
+
+      function onScroll() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollFraction = scrollHeight > 0 ? scrollTop / scrollHeight : 0;
+
+        if (progressBar) {
+          progressBar.style.transform = `scaleX(${scrollFraction})`;
+        }
+
+        if (header) {
+          if (scrollTop > 50) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        }
+
+        // Timeline track progress
+        if (timelineFill && timelineTrack) {
+          const rect = timelineTrack.getBoundingClientRect();
+          const viewHeight = window.innerHeight;
+          if (rect.top < viewHeight && rect.bottom > 0) {
+            const trackProgress = Math.min(Math.max((viewHeight * 0.7 - rect.top) / rect.height, 0), 1);
+            timelineFill.style.height = (trackProgress * 100) + '%';
+          }
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // 4. Dual Custom Animated Cursor (Desktop Only)
+      const cursorDot = document.getElementById('cursorDot');
+      const cursorRing = document.getElementById('cursorRing');
+      const cursorLabel = document.getElementById('cursorLabel');
+
+      if (!isTouchDevice && cursorDot && cursorRing && !prefersReducedMotion) {
+        let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+        let ringX = mouseX, ringY = mouseY;
+        let dotX = mouseX, dotY = mouseY;
+
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+          cursorDot.style.opacity = '1';
+          cursorRing.style.opacity = '1';
+        });
+
+        function renderCursor() {
+          // Dot tracks immediately
+          dotX += (mouseX - dotX) * 0.5;
+          dotY += (mouseY - dotY) * 0.5;
+          cursorDot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0)`;
+
+          // Ring follows smoothly with spring
+          ringX += (mouseX - ringX) * 0.15;
+          ringY += (mouseY - ringY) * 0.15;
+          cursorRing.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
+
+          requestAnimationFrame(renderCursor);
+        }
+        renderCursor();
+
+        // Cursor dynamic hover states
+        const interactiveElements = document.querySelectorAll('a, button, .btn-designer-primary, .btn-designer-glass, .magnetic-btn');
+        interactiveElements.forEach(el => {
+          el.addEventListener('mouseenter', () => {
+            cursorRing.classList.add('cursor-hover');
+          });
+          el.addEventListener('mouseleave', () => {
+            cursorRing.classList.remove('cursor-hover');
+          });
+        });
+
+        const caseStudies = document.querySelectorAll('.case-study-item');
+        caseStudies.forEach(cs => {
+          cs.addEventListener('mouseenter', () => {
+            cursorRing.classList.add('cursor-view');
+            if (cursorLabel) cursorLabel.textContent = 'VIEW';
+          });
+          cs.addEventListener('mouseleave', () => {
+            cursorRing.classList.remove('cursor-view');
+            if (cursorLabel) cursorLabel.textContent = '';
+          });
+        });
+
+        const exploreCards = document.querySelectorAll('.designer-skill-card, .designer-stat-card, .designer-achievement-card');
+        exploreCards.forEach(ec => {
+          ec.addEventListener('mouseenter', () => {
+            cursorRing.classList.add('cursor-explore');
+            if (cursorLabel) cursorLabel.textContent = 'EXPLORE';
+          });
+          ec.addEventListener('mouseleave', () => {
+            cursorRing.classList.remove('cursor-explore');
+            if (cursorLabel) cursorLabel.textContent = '';
+          });
+        });
+      }
+
+      // 5. Magnetic Buttons
+      if (!isTouchDevice && !prefersReducedMotion) {
+        const magneticBtns = document.querySelectorAll('.magnetic-btn');
+        magneticBtns.forEach(btn => {
+          btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = (e.clientX - rect.left - rect.width / 2) * 0.28;
+            const y = (e.clientY - rect.top - rect.height / 2) * 0.28;
+            btn.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+          });
+          btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translate3d(0px, 0px, 0)';
+          });
+        });
+      }
+
+      // 6. 3D Card Tilt & Mouse-following Radial Glow
+      if (!isTouchDevice && !prefersReducedMotion) {
+        const tiltCards = document.querySelectorAll('.tilt-card');
+        tiltCards.forEach(card => {
+          card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // Set CSS custom properties for radial glow
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+
+            // Calculate subtle 3D tilt (max 6deg)
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = ((y - centerY) / centerY) * -5.5;
+            const rotateY = ((x - centerX) / centerX) * 5.5;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+          });
+
+          card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+          });
+        });
+      }
+
+      // 7. Reusable IntersectionObserver for Scroll Reveals
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+
+            // Trigger number counters if present
+            const statVal = entry.target.querySelector('.stat-num-val');
+            if (statVal && !statVal.dataset.counted) {
+              statVal.dataset.counted = "true";
+              const targetNum = parseInt(statVal.dataset.val, 10) || 0;
+              let current = 0;
+              const duration = 1200;
+              const stepTime = Math.max(Math.floor(duration / Math.max(targetNum, 1)), 30);
+              const timer = setInterval(() => {
+                current += 1;
+                statVal.textContent = current;
+                if (current >= targetNum) {
+                  statVal.textContent = targetNum;
+                  clearInterval(timer);
+                }
+              }, stepTime);
+            }
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale, .designer-stat-card, .designer-timeline-item').forEach(el => {
+        revealObserver.observe(el);
+      });
+
+      // 8. Self-Contained Portfolio Download Trigger
+      function triggerPortfolioDownload() {
+        let candidateName = "{{NAME}}".trim();
+        if (!candidateName || candidateName === "{{" + "NAME}}") {
+          const match = document.title.match(/^(.*?)\s*\|/);
+          candidateName = match ? match[1].trim() : "my";
+        }
+        let cleanName = candidateName.replace(/[^a-zA-Z0-9\s_-]/g, '').trim().replace(/[\s_]+/g, '-');
+        if (!cleanName) cleanName = "my";
+        const downloadFilename = cleanName + "-portfolio.html";
+
+        const htmlDoc = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+        const blob = new Blob([htmlDoc], { type: "text/html;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = downloadFilename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      }
+
+      const designerNavBtn = document.getElementById("designerNavDownloadBtn");
+      const designerHeroBtn = document.getElementById("designerHeroDownloadBtn");
+      if (designerNavBtn) designerNavBtn.addEventListener("click", triggerPortfolioDownload);
+      if (designerHeroBtn) designerHeroBtn.addEventListener("click", triggerPortfolioDownload);
+
+    });
+  </script>
+</body>
+</html>
