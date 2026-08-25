@@ -79,11 +79,11 @@
 
 <div class="container">
   <div class="card">
-    <a href="open portfolio-all-in-one (10) - Copy.html">All-In-One Interactive Portfolio</a>
+    <a href="index.html (10) - Copy.html">All-In-One Interactive Portfolio</a>
     <span class="badge">Interactive File</span>
   </div>
   <div class="card">
-    <a href="index5.html">Index 5 Portfolio Edition</a>
+    <a href="index (5).html">Index 5 Portfolio Edition</a>
     <span class="badge">HTML Page</span>
   </div>
 </div>
